@@ -1,15 +1,17 @@
 {
-  "name": "proxy-cli",
+  "name": "@involvex/proxy-cli",
   "module": "src/index.ts",
   "type": "module",
-  "private": true,
+  "author": "involvex",
   "bin": {
-    "proxy-cli": "src/index.ts"
+    "proxy-cli": "dist/proxy-cli.js"
   },
   "scripts": {
+    "build": "bun build --target node --minify ./src/index.ts --outfile dist/proxy-cli.js",
     "dev": "bun run src/index.ts",
     "format": "bun fmt",
     "typecheck": "bun check",
+    "prebuild": "bun run verify",
     "verify": "bun fmt && bun check && bun lint --fix"
   },
   "devDependencies": {
@@ -22,7 +24,8 @@
     "proxy": "^4.1.0",
     "has-flag": "5.0.1"
   },
-  "trustedDependencies": [
-    "itwcw-package-analytics"
+  "files": [
+    "dist/proxy-cli.js",
+    "README.md"
   ]
 }
