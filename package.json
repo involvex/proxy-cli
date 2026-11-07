@@ -1,8 +1,13 @@
 {
   "name": "@involvex/proxy-cli",
+  "version": "0.0.1",
   "module": "src/index.ts",
   "type": "module",
   "author": "involvex",
+  "repository": {
+    "url": "https://github.com/involvex/proxy-cli.git",
+    "type": "git"
+  },
   "bin": {
     "proxy-cli": "dist/proxy-cli.js"
   },
