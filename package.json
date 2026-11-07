@@ -1,0 +1,28 @@
+{
+  "name": "proxy-cli",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "proxy-cli": "src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "format": "bun fmt",
+    "typecheck": "bun check",
+    "verify": "bun fmt && bun check && bun lint --fix"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "proxy": "^4.1.0",
+    "has-flag": "5.0.1"
+  },
+  "trustedDependencies": [
+    "itwcw-package-analytics"
+  ]
+}
